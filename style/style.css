@@ -11,6 +11,10 @@ body {
     display: flex;
 }
 
+i {
+    font-size: 200%;
+}
+
 footer {
     color: #fff;
     position: fixed;
