@@ -6,7 +6,7 @@ body {
     width: 100%;
     font-family: 'Helvetica', sans-serif;
     color: #282828;
-    background-color: rgb(177, 177, 177);
+    background-color: #0d111789;
     flex-direction: column;
     display: flex;
 }
@@ -90,7 +90,7 @@ a {
 .navbar {
     width: 20%;
     height: 100%;
-    background: #02743D;
+    background: #0D1117;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -120,8 +120,8 @@ a {
 
 .navbar .navbar-button {
     width: 100%;
-    padding: 30px 30px;
-    background-color: #02743D;
+    padding: 20px 20px;
+    background-color: transparent;
     color: #fff;
     border: none;
     font-size: 150%;
@@ -130,7 +130,7 @@ a {
 }
 
 .navbar .navbar-button:hover {
-    background-color: #0f653c;
+    background-color: #171B20;
 }
 
 .header {
