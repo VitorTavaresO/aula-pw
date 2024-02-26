@@ -13,6 +13,8 @@ body {
 
 footer {
     color: #fff;
+    position: fixed;
+    bottom: 0;
 }
 
 a {
@@ -34,6 +36,17 @@ a {
     margin: 20px 20px;
     text-align: center;
     font-size: 120%;
+}
+
+.card-academic {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.659);
+    padding: 20px;
+    margin: 20px 20px;
+    text-align: left;
+    justify-content: baseline;
+    font-size: 100%;
 }
 
 .grid {
@@ -90,7 +103,7 @@ a {
 
 
 .navbar .navbar-logo {
-    width: 80%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
