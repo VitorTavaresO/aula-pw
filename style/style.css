@@ -10,7 +10,7 @@ body {
 }
 
 i {
-    font-size: 200%;
+    font-size: 300%;
 }
 
 footer {
@@ -66,11 +66,11 @@ a {
     margin: 20px;
     text-align: center;
     font-size: 120%;
-    width: 25%;
+    width: 45%;
 }
 
 .card-grid .ul-double-column {
-    list-style: inside;
+    list-style: none;
     text-align: left;
     columns: 2;
     padding-inline-start: 20px;
@@ -78,10 +78,13 @@ a {
 
 .card-grid .ul-double-column li {
     margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-grid .ul {
-    list-style: inside;
+    list-style: none;
     text-align: left;
     padding-inline-start: 20px;
 }
@@ -89,7 +92,6 @@ a {
 .card-grid .ul li {
     margin-bottom: 15px;
 }
-
 
 .navbar {
     width: 20%;
@@ -140,4 +142,25 @@ a {
 .header {
     margin: 0;
     text-align: center;
+}
+
+.chart {
+    background: none repeat scroll 0 0 #555555;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.3) inset;
+    width: 140px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+.chart>span {
+    background-color: #0D1117;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 0 2px 9px rgba(255, 255, 255, 0.3) inset, 0 -2px 6px rgba(0, 0, 0, 0.4) inset;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
 }
