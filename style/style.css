@@ -9,8 +9,13 @@ body {
     background-color: #242424;
 }
 
+h1 {
+    font-size: 130%;
+    color: #000;
+}
+
 i {
-    font-size: 300%;
+    font-size: 230%;
 }
 
 footer {
@@ -40,6 +45,8 @@ a {
     margin: 20px 20px;
     text-align: left;
     font-size: 120%;
+    margin-top: 50px;
+    margin-bottom: 70px;
 }
 
 .card-academic {
@@ -98,8 +105,8 @@ a {
 }
 
 .navbar {
-    width: 20%;
-    height: 100%;
+    width: 250px;
+    height: 100vh;
     background-color: #242424;
     color: #fff;
     display: flex;
@@ -107,10 +114,29 @@ a {
     align-items: center;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -250px;
+    transition: left 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.79);
+    z-index: 1000;
 }
 
+.navbar-toggle {
+    width: 24px;
+    height: 24px;
+    background-image: url('https://cdn.iconscout.com/icon/free/png-256/free-three-116-433170.png');
+    background-size: cover;
+    background-color: transparent;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.79);
+    z-index: 1001;
+}
+
+#navbar-toggle:checked~.navbar {
+    left: 0px;
+}
 
 .navbar .navbar-logo {
     width: 60%;
@@ -167,4 +193,34 @@ a {
     height: 20px;
     overflow: hidden;
     position: relative;
+}
+
+@media screen and (max-width: 767px) {
+    .grid {
+        justify-content: center;
+    }
+
+    .card-grid {
+        width: 100%;
+    }
+
+    .navbar {
+        width: 100%;
+        left: -100%;
+        transition: left 0.3s ease;
+    }
+
+    #navbar-toggle:checked+.navbar {
+        left: 0;
+    }
+
+    .navbar .navbar-logo {
+        display: none;
+        /* Hide the logo at smaller screen sizes */
+    }
+
+    .navbar .navbar-button {
+        width: auto;
+        text-align: center;
+    }
 }
