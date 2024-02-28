@@ -21,9 +21,17 @@ i {
 }
 
 footer {
+    background-color: #242424;
     color: #fff;
-    position: fixed;
+    padding: 20px;
+    position: flex;
     bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1000;
 }
 
 a {
@@ -37,6 +45,7 @@ a {
     padding-left: 20%;
     padding-bottom: 20px;
     background-color: transparent;
+    padding-bottom: 100px
 }
 
 .card {
@@ -108,7 +117,7 @@ a {
 
 .navbar {
     width: 250px;
-    height: 100vh;
+    height: 100%;
     background-color: #242424;
     color: #fff;
     display: flex;
