@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     flex-direction: column;
     display: flex;
     background-color: #242424;
@@ -114,7 +116,7 @@ a {
     align-items: center;
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250%;
     transition: left 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.79);
     z-index: 1000;
@@ -132,10 +134,11 @@ a {
     z-index: 999;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.79);
     z-index: 1001;
+    visibility: hidden;
 }
 
 #navbar-toggle:checked~.navbar {
-    left: 0px;
+    left: 0;
 }
 
 .navbar .navbar-logo {
@@ -160,8 +163,8 @@ a {
     background-color: transparent;
     color: #fff;
     border: none;
+    font-family: 'Poppins', sans-serif !important;
     font-size: 130%;
-    font-family: 'Helvetica', sans-serif;
     cursor: pointer;
 }
 
@@ -196,17 +199,20 @@ a {
 }
 
 @media screen and (max-width: 767px) {
+    .container {
+        padding-left: 10%;
+    }
+
     .grid {
         justify-content: center;
     }
 
     .card-grid {
-        width: 100%;
+        width: 90%;
     }
 
     .navbar {
         width: 100%;
-        left: -100%;
         transition: left 0.3s ease;
     }
 
@@ -214,9 +220,12 @@ a {
         left: 0;
     }
 
+    .navbar-toggle {
+        visibility: visible;
+    }
+
     .navbar .navbar-logo {
         display: none;
-        /* Hide the logo at smaller screen sizes */
     }
 
     .navbar .navbar-button {
