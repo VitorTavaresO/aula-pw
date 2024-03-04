@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@import url('var.css');
+
 body {
     margin: 0;
     padding: 0;
@@ -12,8 +14,8 @@ body {
 }
 
 footer {
-    background-color: #242424;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 20px;
     position: flex;
     bottom: 0;
@@ -30,14 +32,14 @@ footer i {
 }
 
 footer a {
-    color: #fff;
+    color: var(--secondary-color);
     text-decoration: none;
     padding: 10px;
 }
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: var(--secondary-color);
 }
 
 .container {
@@ -51,7 +53,7 @@ a {
 }
 
 .card {
-    background-color: #fff;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.659);
     padding: 20px;
@@ -68,7 +70,7 @@ a {
 }
 
 .card-academic {
-    background-color: #fff;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.659);
     padding: 20px;
@@ -79,7 +81,7 @@ a {
 }
 
 .back {
-    background-color: #fff;
+    background-color: var(--secondary-color);
 }
 
 .grid {
@@ -89,7 +91,7 @@ a {
 }
 
 .card-grid {
-    background-color: #fff;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.659);
     margin: 20px;
@@ -133,7 +135,7 @@ a {
 }
 
 .card-project {
-    background-color: #fff;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.659);
     margin: 20px;
@@ -159,8 +161,8 @@ a {
 .navbar {
     width: 250px;
     height: 100%;
-    background-color: #242424;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,7 +213,7 @@ a {
     width: 100%;
     padding: 20px 20px;
     background-color: transparent;
-    color: #fff;
+    color: var(--secondary-color);
     border: none;
     font-family: 'Poppins', sans-serif !important;
     font-size: x-large;
@@ -239,7 +241,7 @@ a {
 }
 
 .chart>span {
-    background-color: #242424;
+    background-color: var(--primary-color);
     border-radius: 20px 0px 0px 20px;
     box-shadow: 0 2px 9px rgba(255, 255, 255, 0.3) inset, 0 -2px 6px rgba(0, 0, 0, 0.4) inset;
     display: block;
