@@ -80,8 +80,15 @@ a {
     font-size: medium;
 }
 
-.back {
+.card-academic-back {
     background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.659);
+    padding: 20px;
+    margin: 20px 20px;
+    text-align: left;
+    justify-content: baseline;
+    font-size: medium;
 }
 
 .grid {
@@ -179,7 +186,7 @@ a {
     height: 24px;
     background-image: url('https://cdn.iconscout.com/icon/free/png-256/free-three-116-433170.png');
     background-size: cover;
-    background-color: transparent;
+    background-color: var(--primary-color);
     position: fixed;
     top: 10px;
     left: 10px;
@@ -251,6 +258,11 @@ a {
 }
 
 @media screen and (max-width: 767px) {
+
+    .academic-page .container {
+        padding-left: 2%;
+    }
+
     .container {
         padding-left: 10%;
     }
@@ -265,6 +277,21 @@ a {
 
     .card-project {
         width: 90%;
+    }
+
+    .card-academic-back {
+        width: 100%;
+    }
+
+    .card-academic {
+        background-color: var(--secondary-color);
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.659);
+        padding: 0px;
+        margin: 0px 0px;
+        text-align: left;
+        justify-content: baseline;
+        font-size: medium;
     }
 
     .navbar {
