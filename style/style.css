@@ -263,6 +263,11 @@ a {
         padding-left: 0%;
     }
 
+    .card {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
     .container {
         padding-left: 10%;
     }
