@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vitor Tavares - Desenvolvedor de Software">
+    <meta name="keywords" content="Dev Tools, Médias, Desvio, Converter Binário">
+    <meta name="author" content="Vitor Tavares">
+
+    <meta property="og:title" content="Dev Tools">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:description" content="Ferramentas de Cálculos Matemáticos Simples">
+    <meta property="og:url" content="https://vitor-tavares.github.io">
+
+    <link rel="stylesheet" href="style/devtools.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <title>Dev Tools</title>
+
+</head>
+
+<body class="devtools">
+    <main>
+        <form>
+            <h1>Calcular Informações do Vetor</h1>
+            <label for="numbers">Insira o vetor separado por vírgulas</label>
+            <br>
+            <textarea rows="10" cols="50" id="numbers" name="numbers" required></textarea>
+            <br>
+            <button type="submit">Calcular</button>
+        </form>
+
+        <div class="result">
+            <h2>Resultado</h2>
+            <p id="average">Média: </p>
+            <p id="median">Mediana: </p>
+            <p id="variance">Variância: </p>
+            <p id="stdev">Desvio Padrão: </p>
+            <p id="cofv">Coeficiente de Variação: </p>
+    </main>
+    <script type="text/javascript" src="devtools.js"></script>
+</body>
+
+</html>
