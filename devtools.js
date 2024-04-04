@@ -24,8 +24,7 @@ if (genVector) {
     });
 }
 
-
-
+// --------------------------------------------
 
 let vectorInfo = document.getElementById('vectorInfo');
 if (vectorInfo) {
@@ -87,4 +86,49 @@ if (vectorInfo) {
         
 
     })
+}
+
+// --------------------------------------------
+
+let converter = document.getElementById('converter');
+if (converter) {
+    converter.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        let number = document.getElementById('value').value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+
+        let result = 0;
+        switch (from) {
+            case 'binary':
+                result = parseInt(number, 2);
+                break;
+            case 'decimal':
+                result = parseInt(number, 10);
+                break;
+            case 'hexadecimal':
+                if (!number.startsWith('0x')) {
+                    number = '0x' + number;
+                }
+                result = parseInt(number, 16);
+                break;
+        }
+
+        switch (to) {
+            case 'binary':
+                result = result.toString(2);
+                break;
+            case 'decimal':
+                result = result.toString(10);
+                break;
+            case 'hexadecimal':
+                result = result.toString(16);
+                break;
+        }
+
+        let conversion = document.getElementById('conversion');
+        conversion.innerHTML = result;
+        conversion.style.display = 'block';
+    });
 }

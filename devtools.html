@@ -54,9 +54,30 @@
 
             <div id="results"> </div>
         </section>
-
+        <hr>
         <section>
-
+            <h1>Conversor</h1>
+            <form id="converter">
+                <select id="from" name="from">
+                    <option value="binary">Binário</option>
+                    <option value="decimal">Decimal</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                </select>
+                <p> To </p>
+                <select id="to" name="to">
+                    <option value="binary">Binário</option>
+                    <option value="decimal">Decimal</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                </select>
+                <br>
+                <br>
+                <input type="text" id="value" name="value" required>
+                <br>
+                <br>
+                <button type="submit">Converter</button>
+            </form>
+            <br>
+            <div id="conversion"> </div>
         </section>
     </main>
     <script type="text/javascript" src="devtools.js"></script>
