@@ -1,14 +1,14 @@
-var form = document.querySelector('form');
+let form = document.querySelector('form');
 if (form) {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        var numbersTextArea = document.getElementById('numbers');
-        var numbersString = numbersTextArea.value;
+        let numbersTextArea = document.getElementById('numbers');
+        let numbersString = numbersTextArea.value;
 
-        var numbersArray = numbersString.split(',');
+        let numbersArray = numbersString.split(',');
 
-        var numbers = numbersArray.map(function(num) {
+        let numbers = numbersArray.map(function(num) {
             return parseInt(num.trim());
         });
         
@@ -17,8 +17,31 @@ if (form) {
         }
         );
         
+        let sum = numbers.reduce(function(a, b) {
+            return a + b;
+        } 
+        );
 
-        });
-} else {
-    console.error('Formulário não encontrado.');
-};
+        let average = sum / numbers.length;
+
+        let median = 0;
+        if (numbers.length % 2 === 0) {
+            let middle = numbers.length / 2;
+            median = (numbers[middle - 1] + numbers[middle]) / 2;
+        } else {
+            let middle = Math.floor(numbers.length / 2);
+            median = numbers[middle];
+        }
+
+        let results = document.getElementById('results');
+        results.innerHTML = `
+            <p><strong>Vetor Ordenado:</strong> ${numbers.join(', ')}</p>
+            <p><strong>Média:</strong> ${average}</p>
+            <p><strong>Mediana:</strong> ${median}</p>
+        `;
+
+        results.style.display = 'block';
+        
+
+    })
+}
