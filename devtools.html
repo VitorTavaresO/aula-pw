@@ -79,6 +79,27 @@
             <br>
             <div id="conversion"> </div>
         </section>
+        <hr>
+        <section>
+            <h1>Gerar Vetor de Números Aleatórios</h1>
+            <form id="calculateFloatingPointForm">
+                <h2>Calcular Características do Sistema de Ponto Flutuante</h2>
+                <label for="base">Base (β):</label>
+                <input type="number" id="base" name="base" required>
+                <br>
+                <label for="precision">Precisão (p):</label>
+                <input type="number" id="precision" name="precision" required>
+                <br>
+                <label for="minExponent">Expoente Mínimo (m):</label>
+                <input type="number" id="minExponent" name="minExponent" required>
+                <br>
+                <label for="maxExponent">Expoente Máximo (M):</label>
+                <input type="number" id="maxExponent" name="maxExponent" required>
+                <br>
+                <button type="submit">Calcular</button>
+            </form>
+            <div id="floatingPointResult"> </div>
+        </section>
     </main>
     <script type="text/javascript" src="devtools.js"></script>
 </body>

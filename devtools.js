@@ -132,3 +132,50 @@ if (converter) {
         conversion.style.display = 'block';
     });
 }
+
+// Função para calcular características do sistema de ponto flutuante
+function calculateFloatingPointCharacteristics(base, precision, minExponent, maxExponent) {
+    let minMantissa = Math.pow(base, -precision); // Valor mínimo da mantissa
+    let maxMantissa = 1 - Math.pow(base, -precision); // Valor máximo da mantissa
+
+    let underflow = minMantissa * Math.pow(base, minExponent); // Valor de underflow
+    let overflow = maxMantissa * Math.pow(base, maxExponent); // Valor de overflow
+
+    // Quantidade de números representáveis de forma exata
+    let numbersRepresentable = Math.pow(base, precision) * (Math.pow(base, maxExponent) - Math.pow(base, minExponent + 1) + 1);
+
+    return {
+        mantissa: `[${minMantissa}, ${maxMantissa}]`,
+        underflow: underflow,
+        overflow: overflow,
+        numbersRepresentable: numbersRepresentable
+    };
+}
+
+// Lidar com a submissão do formulário
+let calculateFloatingPointForm = document.getElementById('calculateFloatingPointForm');
+if (calculateFloatingPointForm) {
+    calculateFloatingPointForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Obter os valores dos campos do formulário
+        let base = parseInt(document.getElementById('base').value);
+        let precision = parseInt(document.getElementById('precision').value);
+        let minExponent = parseInt(document.getElementById('minExponent').value);
+        let maxExponent = parseInt(document.getElementById('maxExponent').value);
+
+        // Calcular as características do sistema de ponto flutuante
+        let result = calculateFloatingPointCharacteristics(base, precision, minExponent, maxExponent);
+
+        // Exibir os resultados
+        let floatingPointResult = document.getElementById('floatingPointResult');
+        floatingPointResult.innerHTML = `
+            <h2>Resultados:</h2>
+            <p><strong>Mantissa:</strong> ${result.mantissa}</p>
+            <p><strong>Underflow:</strong> ${result.underflow}</p>
+            <p><strong>Overflow:</strong> ${result.overflow}</p>
+            <p><strong>Números Representáveis de Forma Exata:</strong> ${result.numbersRepresentable}</p>
+        `;
+    });
+}
+
