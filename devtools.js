@@ -133,49 +133,58 @@ if (converter) {
     });
 }
 
-// Função para calcular características do sistema de ponto flutuante
-function calculateFloatingPointCharacteristics(base, precision, minExponent, maxExponent) {
-    let minMantissa = Math.pow(base, -precision); // Valor mínimo da mantissa
-    let maxMantissa = 1 - Math.pow(base, -precision); // Valor máximo da mantissa
+// --------------------------------------------
 
-    let underflow = minMantissa * Math.pow(base, minExponent); // Valor de underflow
-    let overflow = maxMantissa * Math.pow(base, maxExponent); // Valor de overflow
+// Função para calcular as características do sistema de ponto flutuante
+function calcularCaracteristicasPontoFlutuante(base, precisao, minExpoente, maxExpoente) {
+    // Calcular o número de mantissas possíveis
+    const numMantissas = Math.pow(base, precisao);
 
-    // Quantidade de números representáveis de forma exata
-    let numbersRepresentable = Math.pow(base, precision) * (Math.pow(base, maxExponent) - Math.pow(base, minExponent + 1) + 1);
+    // Calcular o underflow
+    const underflow = 1 / Math.pow(base, -maxExpoente);
 
+    // Calcular o overflow
+    const overflow = Math.pow(base, maxExpoente);
+
+    // Calcular o número de números representáveis de forma exata
+    const numRepresentaveisExatos = base ** precisao * (base ** maxExpoente - base ** (minExpoente + 1) + 1);
+
+    // Retornar os resultados calculados
     return {
-        mantissa: `[${minMantissa}, ${maxMantissa}]`,
-        underflow: underflow,
-        overflow: overflow,
-        numbersRepresentable: numbersRepresentable
+        numMantissas,
+        underflow,
+        overflow,
+        numRepresentaveisExatos
     };
 }
 
-// Lidar com a submissão do formulário
-let calculateFloatingPointForm = document.getElementById('calculateFloatingPointForm');
-if (calculateFloatingPointForm) {
-    calculateFloatingPointForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        // Obter os valores dos campos do formulário
-        let base = parseInt(document.getElementById('base').value);
-        let precision = parseInt(document.getElementById('precision').value);
-        let minExponent = parseInt(document.getElementById('minExponent').value);
-        let maxExponent = parseInt(document.getElementById('maxExponent').value);
-
-        // Calcular as características do sistema de ponto flutuante
-        let result = calculateFloatingPointCharacteristics(base, precision, minExponent, maxExponent);
-
-        // Exibir os resultados
-        let floatingPointResult = document.getElementById('floatingPointResult');
-        floatingPointResult.innerHTML = `
-            <h2>Resultados:</h2>
-            <p><strong>Mantissa:</strong> ${result.mantissa}</p>
-            <p><strong>Underflow:</strong> ${result.underflow}</p>
-            <p><strong>Overflow:</strong> ${result.overflow}</p>
-            <p><strong>Números Representáveis de Forma Exata:</strong> ${result.numbersRepresentable}</p>
-        `;
-    });
+// Função para exibir os resultados no HTML
+function exibirResultados(resultados) {
+    const resultadoHTML = `
+        <p>Mantissas Possíveis: ${resultados.numMantissas}</p>
+        <p>Underflow: ${resultados.underflow}</p>
+        <p>Overflow: ${resultados.overflow}</p>
+        <p>Números Representáveis de Forma Exata: ${resultados.numRepresentaveisExatos}</p>
+    `;
+    // Atualizar o conteúdo da div com os resultados
+    document.getElementById('floatingPointResult').innerHTML = resultadoHTML;
 }
+
+// Função para lidar com o envio do formulário
+document.getElementById('calculateFloatingPointForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Obter os valores inseridos pelo usuário
+    const base = parseInt(document.getElementById('base').value);
+    const precisao = parseInt(document.getElementById('precision').value);
+    const minExpoente = parseInt(document.getElementById('minExponent').value);
+    const maxExpoente = parseInt(document.getElementById('maxExponent').value);
+
+    // Calcular as características do sistema de ponto flutuante
+    const resultados = calcularCaracteristicasPontoFlutuante(base, precisao, minExpoente, maxExpoente);
+
+    // Exibir os resultados no HTML
+    exibirResultados(resultados);
+});
+
 
