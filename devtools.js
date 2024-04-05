@@ -135,3 +135,39 @@ if (converter) {
 
 // --------------------------------------------
 
+function calculatePA() {
+    let firstTerm = parseFloat(document.getElementById('pa-first-term').value);
+    let difference = parseFloat(document.getElementById('pa-difference').value);
+    let numTerms = parseInt(document.getElementById('pa-num-terms').value);
+
+    let paResult = document.getElementById('pa-result');
+
+    let terms = [];
+    for (let i = 0; i < numTerms; i++) {
+        terms.push(firstTerm + (i * difference));
+    }
+
+    let sum = (numTerms * (firstTerm + terms[terms.length - 1])) / 2;
+
+    paResult.textContent = `Termos: ${terms.join(', ')}. Soma: ${sum}`;
+}
+
+// --------------------------------------------
+
+function calculatePG() {
+    let firstTerm = parseFloat(document.getElementById('pg-first-term').value);
+    let ratio = parseFloat(document.getElementById('pg-ratio').value);
+    let numTerms = parseInt(document.getElementById('pg-num-terms').value);
+
+    let pgResult = document.getElementById('pg-result');
+
+    let terms = [];
+    for (let i = 0; i < numTerms; i++) {
+        terms.push(firstTerm * Math.pow(ratio, i));
+    }
+
+    let sum = firstTerm * ((Math.pow(ratio, numTerms) - 1) / (ratio - 1));
+
+    pgResult.textContent = `Termos: ${terms.join(', ')}. Soma: ${sum}`;
+}
+
