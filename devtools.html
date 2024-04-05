@@ -80,6 +80,30 @@
             <div id="conversion"> </div>
         </section>
         <hr>
+        <section>
+            <h2>Progressão Aritmética (PA)</h2>
+            <label for="pa-first-term">Primeiro Termo:</label>
+            <input type="number" id="pa-first-term">
+            <label for="pa-difference">Diferença:</label>
+            <input type="number" id="pa-difference">
+            <label for="pa-num-terms">Número de Termos:</label>
+            <input type="number" id="pa-num-terms">
+            <button onclick="calculatePA()">Calcular PA</button>
+            <p id="pa-result"></p>
+        </section>
+        <hr>
+        <section>
+            <h2>Progressão Geométrica (PG)</h2>
+            <label for="pg-first-term">Primeiro Termo:</label>
+            <input type="number" id="pg-first-term">
+            <label for="pg-ratio">Razão:</label>
+            <input type="number" id="pg-ratio">
+            <label for="pg-num-terms">Número de Termos:</label>
+            <input type="number" id="pg-num-terms">
+            <button onclick="calculatePG()">Calcular PG</button>
+            <p id="pg-result"></p>
+
+        </section>
     </main>
     <script type="text/javascript" src="devtools.js"></script>
 </body>
