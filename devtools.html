@@ -21,21 +21,25 @@
 
 <body class="devtools">
     <main>
-        <section>
+        <section class="genVector-container">
             <h1>Gerar Vetor de Números Aleatórios</h1>
             <form id="genVector">
-                <label for="size">Tamanho do Vetor</label>
-                <input type="number" id="size" name="size" required>
-                <br>
-                <label for="decimal">Valores Decimais</label>
-                <input type="checkbox" id="decimal" name="decimal">
-                <br>
-                <label for="min">Valor Mínimo</label>
-                <input type="decimal" id="min" name="min" required>
-                <br>
-                <label for="max">Valor Máximo</label>
-                <input type="decimal" id="max" name="max" required>
-                <br>
+                <div class="genVector-group">
+                    <label for="size">Tamanho do Vetor</label>
+                    <input type="number" id="size" name="size" required>
+                </div>
+                <div class="genVector-group">
+                    <label for="decimal">Valores Decimais</label>
+                    <input type="checkbox" id="decimal" name="decimal">
+                </div>
+                <div class="genVector-group">
+                    <label for="min">Valor Mínimo</label>
+                    <input type="decimal" id="min" name="min" required>
+                </div>
+                <div class="genVector-group">
+                    <label for="max">Valor Máximo</label>
+                    <input type="decimal" id="max" name="max" required>
+                </div>
                 <button type="submit">Gerar</button>
             </form>
             <br>
