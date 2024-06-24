@@ -4,8 +4,8 @@ body {
 
 
 .card {
-    width: 300px;
-    margin: 0 auto;
+    width: 80%;
+    margin: 50px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -23,12 +23,8 @@ body {
     font-weight: bold;
 }
 
-.div-input .size,
-.min,
-.max,
-.numbers,
-.select-input,
-.text-input {
+.div-input .text-input,
+.select-input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -37,6 +33,7 @@ body {
 }
 
 .submit-button {
+    margin-bottom: 15px;
     padding: 8px 15px;
     background-color: #007bff;
     color: #fff;
