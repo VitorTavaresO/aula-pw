@@ -22,13 +22,20 @@ body {
     font-weight: bold;
 }
 
-.genVector-group input[type="text"],
-.genVector-group input[type="checkbox"] {
+.genVector-group input[type="number"],
+.genVector-group input[type="decimal"] {
     width: 100%;
     padding: 8px;
+    border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
-.genVector-group input[type="checkbox"] {
-    width: auto;
+.genVector-button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
