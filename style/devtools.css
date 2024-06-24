@@ -23,10 +23,12 @@ body {
     font-weight: bold;
 }
 
-.div-input #size,
-#min,
-#max,
-#numbers {
+.div-input .size,
+.min,
+.max,
+.numbers,
+.select-input,
+.text-input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;

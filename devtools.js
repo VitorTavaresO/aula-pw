@@ -128,8 +128,7 @@ if (converter) {
         }
 
         let conversion = document.getElementById('conversion');
-        conversion.innerHTML = result;
-        conversion.style.display = 'block';
+        conversion.value = result;
     });
 }
 
