@@ -3,27 +3,30 @@ body {
 }
 
 
-.genVector-container {
+.card {
     width: 300px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
+
 }
 
-.genVector-group {
+.div-input {
     margin-bottom: 15px;
 }
 
-.genVector-group label {
+.div-input label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-.genVector-group input[type="number"],
-.genVector-group input[type="decimal"] {
+.div-input #size,
+#min,
+#max,
+#numbers {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -31,7 +34,7 @@ body {
     border-radius: 5px;
 }
 
-.genVector-button {
+.submit-button {
     padding: 8px 15px;
     background-color: #007bff;
     color: #fff;
