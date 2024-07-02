@@ -50,6 +50,7 @@ a {
     background-color: transparent;
     padding-bottom: 100px;
     flex: 1;
+    min-height: 100vh;
 }
 
 .card {
@@ -89,6 +90,14 @@ a {
     text-align: left;
     justify-content: baseline;
     font-size: medium;
+}
+
+.status {
+    padding: 20px;
+    margin: 20px 20px;
+    text-align: center;
+    font-size: large;
+    color: #fff;
 }
 
 .grid {

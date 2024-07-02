@@ -2,8 +2,9 @@ var repos = ['hass', 'plantae', 'haos', 'motor-control'];
 
 window.addEventListener('load', function () {
     const container = document.getElementById('grid');
-
-    repos.forEach(repo => {
+    const status = document.getElementById('status');
+    status.innerText = 'Loading...';
+    /*repos.forEach(repo => {
         fetch(`https://api.github.com/repos/vitortavareso/${repo}`)
             .then(response => response.json())
             .then(data => {
@@ -32,4 +33,6 @@ window.addEventListener('load', function () {
                 container.appendChild(card);
             });
     });
+    status.innerText = "";
+    */
 });
