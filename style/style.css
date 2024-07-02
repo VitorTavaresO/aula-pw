@@ -175,6 +175,7 @@ a {
 }
 
 .navbar {
+    flex-direction: column;
     width: 250px;
     height: 100%;
     background-color: var(--primary-color);
@@ -184,29 +185,9 @@ a {
     align-items: center;
     position: fixed;
     top: 0;
-    left: -250%;
     transition: left 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.79);
     z-index: 1000;
-}
-
-.navbar-toggle {
-    width: 24px;
-    height: 24px;
-    background-image: url('https://cdn.iconscout.com/icon/free/png-256/free-three-116-433170.png');
-    background-size: cover;
-    background-color: var(--primary-color);
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 999;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.79);
-    z-index: 1001;
-    visibility: hidden;
-}
-
-#navbar-toggle:checked~.navbar {
-    left: 0;
 }
 
 .navbar .navbar-logo {
@@ -234,10 +215,6 @@ a {
     font-family: 'Poppins', sans-serif !important;
     font-size: x-large;
     cursor: pointer;
-}
-
-.navbar .navbar-button:hover {
-    background-color: #171B20;
 }
 
 .header {
@@ -310,11 +287,28 @@ a {
 
     .navbar {
         width: 100%;
+        position: fixed;
+        top: 0;
+        left: -100%;
         transition: left 0.3s ease;
+        display: flex;
     }
 
-    #navbar-toggle:checked+.navbar {
+    .navbar.active {
         left: 0;
+    }
+
+    .navbar-toggle {
+        width: 24px;
+        height: 24px;
+        background-image: url('https://cdn.iconscout.com/icon/free/png-256/free-three-116-433170.png');
+        background-size: cover;
+        background-color: var(--primary-color);
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1001;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.79);
     }
 
     .navbar-toggle {

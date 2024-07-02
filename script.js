@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
     const container = document.getElementById('grid');
     const status = document.getElementById('status');
     status.innerText = 'Loading...';
-    /*repos.forEach(repo => {
+    repos.forEach(repo => {
         fetch(`https://api.github.com/repos/vitortavareso/${repo}`)
             .then(response => response.json())
             .then(data => {
@@ -34,5 +34,4 @@ window.addEventListener('load', function () {
             });
     });
     status.innerText = "";
-    */
 });
