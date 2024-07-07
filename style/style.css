@@ -94,7 +94,6 @@ footer a {
 
 .image-container .centered-image {
     border-radius: 50%;
-    border: var(--secondary-color) 2px solid;
     box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
     width: 250px;
     height: 250px;
@@ -112,7 +111,6 @@ footer a {
 .card {
     background-color: transparent;
     border-radius: 10px;
-    border: var(--secondary-color) 2px solid;
     box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
     padding: 20px;
     margin: 50px;
@@ -140,7 +138,6 @@ footer a {
 .card-academic {
     background-color: transparent;
     border-radius: 10px;
-    border: var(--secondary-color) 2px solid;
     box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
     padding: 20px;
     margin: 20px 20px;
@@ -167,7 +164,6 @@ footer a {
 .card-grid {
     background-color: transparent;
     border-radius: 10px;
-    border: var(--secondary-color) 2px solid;
     box-shadow: 0 0 8px var(--secondary-color), 0 0 20px var(--secondary-color), 0 0 40px var(--secondary-color);
     margin: 20px;
     text-align: center;
@@ -212,7 +208,6 @@ footer a {
 .card-project {
     background-color: transparent;
     border-radius: 10px;
-    border: var(--secondary-color) 2px solid;
     box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
     margin: 20px;
     text-align: center;
@@ -261,7 +256,6 @@ footer a {
 }
 
 .navbar .navbar-button:hover {
-    border: var(--secondary-color) 2px solid;
     box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
 }
 
@@ -368,7 +362,6 @@ footer a {
     }
 
     .navbar .navbar-button:hover {
-        border: var(--secondary-color) 2px solid;
         box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
     }
 }
