@@ -10,7 +10,37 @@ body {
     font-family: 'Poppins', sans-serif !important;
     flex-direction: column;
     display: flex;
-    background-color: #242424f0;
+    background-color: #1D1D1D;
+}
+
+h1 {
+    font-size: x-large;
+    color: var(--text-color);
+}
+
+h2 {
+    color: var(--text-color);
+}
+
+h3 {
+    color: var(--text-color);
+}
+
+h4 {
+    color: var(--text-color);
+}
+
+p {
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: transparent;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }
 
 footer {
@@ -29,17 +59,14 @@ footer {
 
 footer i {
     font-size: xx-large;
+    color: var(--navbar-text-color);
+    text-shadow: 0 0 3px var(--secondary-color), 0 0 6px var(--secondary-color), 0 0 9px var(--secondary-color);
 }
 
 footer a {
     color: var(--secondary-color);
     text-decoration: none;
     padding: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: var(--secondary-color);
 }
 
 .container {
@@ -54,11 +81,12 @@ a {
 }
 
 .card {
-    background-color: var(--secondary-color);
+    background-color: transparent;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.659);
+    border: var(--secondary-color) 2px solid;
+    box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
     padding: 20px;
-    margin: 20px 20px;
+    margin: 50px;
     text-align: left;
     font-size: large;
     margin-top: 50px;
@@ -67,24 +95,22 @@ a {
 
 .card h1 {
     font-size: x-large;
-    color: #000;
+    color: var(--text-color);
+}
+
+.academic-section {
+    padding-top: 20px;
+}
+
+.academic-section h1 {
+    padding-left: 20px;
 }
 
 .card-academic {
-    background-color: var(--secondary-color);
+    background-color: transparent;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.659);
-    padding: 20px;
-    margin: 20px 20px;
-    text-align: left;
-    justify-content: baseline;
-    font-size: medium;
-}
-
-.card-academic-back {
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.659);
+    border: var(--secondary-color) 2px solid;
+    box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
     padding: 20px;
     margin: 20px 20px;
     text-align: left;
@@ -107,9 +133,10 @@ a {
 }
 
 .card-grid {
-    background-color: var(--secondary-color);
+    background-color: transparent;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.659);
+    border: var(--secondary-color) 2px solid;
+    box-shadow: 0 0 8px var(--secondary-color), 0 0 20px var(--secondary-color), 0 0 40px var(--secondary-color);
     margin: 20px;
     text-align: center;
     font-size: xx-large;
@@ -151,9 +178,10 @@ a {
 }
 
 .card-project {
-    background-color: var(--secondary-color);
+    background-color: transparent;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.659);
+    border: var(--secondary-color) 2px solid;
+    box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
     margin: 20px;
     text-align: center;
     font-size: large;
@@ -165,16 +193,12 @@ a {
     height: 50%;
 }
 
-.card-project h1 {
-    font-size: x-large;
-    color: #000;
-}
-
 .card-project i {
     font-size: x-large;
 }
 
 .navbar {
+    padding-top: 5%;
     flex-direction: column;
     width: 250px;
     height: 100%;
@@ -210,7 +234,8 @@ a {
     width: 100%;
     padding: 20px 20px;
     background-color: transparent;
-    color: var(--secondary-color);
+    color: var(--navbar-text-color);
+    text-shadow: 0 0 3px var(--secondary-color), 0 0 6px var(--secondary-color), 0 0 9px var(--secondary-color);
     border: none;
     font-family: 'Poppins', sans-serif !important;
     font-size: x-large;
@@ -218,7 +243,8 @@ a {
 }
 
 .navbar .navbar-button:hover {
-    background-color: #a9a9a9;
+    border: var(--secondary-color) 2px solid;
+    box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
 }
 
 .header {
@@ -257,12 +283,18 @@ a {
         padding-left: 10%;
     }
 
+    .card {
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 70px;
+    }
+
     .grid {
         justify-content: center;
     }
 
     .card-grid {
-        width: 90%;
+        width: 92%;
     }
 
     .card-project {

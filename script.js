@@ -1,4 +1,4 @@
-var repos = ['hass', 'plantae', 'haos', 'motor-control'];
+var repos = ['hass', 'arcade-ifpr', 'motor-control'];
 
 window.addEventListener('load', function () {
     const container = document.getElementById('grid');
@@ -8,11 +8,11 @@ window.addEventListener('load', function () {
         fetch(`https://api.github.com/repos/vitortavareso/${repo}`)
             .then(response => response.json())
             .then(data => {
-                const card = document.createElement('section');
-                card.className = 'card-project';
-
                 const link = document.createElement('a');
                 link.href = `https://github.com/VitorTavaresO/${repo}`;
+                link.className = 'card-project';
+
+                const card = document.createElement('section');
 
                 const image = document.createElement('img');
                 image.src = `images/${repo}.png`;
@@ -26,11 +26,12 @@ window.addEventListener('load', function () {
                 description.className = 'description';
                 description.textContent = data.description;
 
-                link.appendChild(image);
-                card.appendChild(link);
+                card.appendChild(image);
                 card.appendChild(name);
                 card.appendChild(description);
-                container.appendChild(card);
+
+                link.appendChild(card); // Adiciona o card ao link
+                container.appendChild(link);
             });
     });
     status.innerText = "";

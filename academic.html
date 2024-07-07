@@ -24,19 +24,16 @@
     <header>
         <button id="navbar-toggle" class="navbar-toggle" onclick="navbarEnable()"></button>
         <nav class="navbar">
-            <div class="navbar-logo">
-                <img src="images/logo.png" alt="Logo">
-            </div>
-            <button class="navbar-button"><a href="index.html">Vitor Tavares</a></button>
-            <button class="navbar-button"><a href="projects.html">Projetos</a></button>
-            <button class="navbar-button"><a href="">Acadêmico</a></button>
-            <button class="navbar-button"><a href="exp.html">Experiência</a></button>
-            <button class="navbar-button"><a href="devtools.html">Ferramentas</a></button>
+            <a href="index.html"><button class="navbar-button">Vitor Tavares</button></a>
+            <a href="projects.html"><button class="navbar-button">Projetos</button></a>
+            <a href=""><button class="navbar-button">Acadêmico</button></a>
+            <a href="exp.html"><button class="navbar-button">Experiência</button></a>
+            <button class="navbar-button" onclick="window.open('devtools.html', '_blank');">Ferramentas</button>
         </nav>
     </header>
     <main class="container">
-        <section class="card-academic-back">
-            <h2>Formação Acadêmica</h2>
+        <section class="academic-section">
+            <h1>Formação Acadêmica</h1>
             <div class="card-academic">
                 <h3>Técnico em Informática</h3>
                 <h4>2018/2021 - Instituto Federal do Paraná - Campus Paranavaí</h4>
@@ -62,8 +59,8 @@
                 </p>
             </div>
         </section>
-        <section class="card-academic-back">
-            <h2>Cursos</h2>
+        <section class="academic-section">
+            <h1>Cursos</h1>
             <div class="card-academic">
                 <h3>Módulo Sistemas Embarcados e IoT</h3>
                 <h4>2023 - Instituto Federal do Paraná - Campus Paranavaí</h4>
