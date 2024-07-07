@@ -225,6 +225,10 @@ footer a {
     height: 50%;
 }
 
+.card-project h1 {
+    text-transform: uppercase;
+}
+
 .card-project i {
     font-size: x-large;
 }
