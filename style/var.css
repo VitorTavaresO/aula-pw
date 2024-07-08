@@ -1,6 +1,15 @@
-:root {
+[data-theme="dark"] {
     --primary-color: #181818;
-    --secondary-color: #107868;
-    --navbar-text-color: #10C098;
+    --secondary-color: #107831;
+    --terciary-color: #1D1D1D;
+    --navbar-text-color: #07e551;
     --text-color: #f0f0f0;
+}
+
+[data-theme="light"] {
+    --primary-color: #f0f0f0;
+    --secondary-color: #58595a;
+    --terciary-color: #f0f0f0;
+    --navbar-text-color: #181818;
+    --text-color: #181818;
 }

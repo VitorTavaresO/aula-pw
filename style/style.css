@@ -17,7 +17,7 @@ body {
     font-family: 'Poppins', sans-serif !important;
     flex-direction: column;
     display: flex;
-    background-color: #1D1D1D;
+    background-color: var(--terciary-color);
 }
 
 h1 {
@@ -258,6 +258,13 @@ footer a {
 
 .navbar .navbar-button:hover {
     box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
+}
+
+.navbar i {
+    margin-right: 10px;
+    font-size: xx-large;
+    color: var(--navbar-text-color);
+    text-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 8px var(--secondary-color);
 }
 
 .header {

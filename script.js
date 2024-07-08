@@ -1,3 +1,21 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+    if (theme) {
+        document.body.setAttribute('data-theme', theme);
+    }
+});
+
+function navbarEnable() {
+    var navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
+}
+
+function changeTheme() {
+    const theme = document.body.getAttribute('data-theme');
+    document.body.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
+    localStorage.setItem('theme', theme === 'dark' ? 'light' : 'dark');
+}
+
 var repos = ['hass', 'arcade-ifpr', 'motor-control'];
 
 window.addEventListener('load', function () {
@@ -30,7 +48,7 @@ window.addEventListener('load', function () {
                 card.appendChild(name);
                 card.appendChild(description);
 
-                link.appendChild(card); // Adiciona o card ao link
+                link.appendChild(card);
                 container.appendChild(link);
             });
     });
