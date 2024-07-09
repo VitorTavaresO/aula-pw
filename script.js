@@ -3,7 +3,24 @@ document.addEventListener('DOMContentLoaded', function () {
     if (theme) {
         document.body.setAttribute('data-theme', theme);
     }
+    localization();
 });
+
+function localization() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            console.log(position);
+            fetch(`https://geocode.xyz/${latitude},${longitude}?geoit=json`).then(response => response.json()).then(data => {
+                const localization = data.region || data.city || `${latitude}, ${longitude}`;
+            }).catch(error => {
+                console.log("Error: ", error);
+            });
+        }
+        )
+    }
+}
 
 function navbarEnable() {
     var navbar = document.querySelector('.navbar');

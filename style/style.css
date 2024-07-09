@@ -94,7 +94,7 @@ footer a {
 
 .image-container .centered-image {
     border-radius: 50%;
-    box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
+    box-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 6px var(--secondary-color);
     width: 250px;
     height: 250px;
     object-fit: cover;
@@ -111,7 +111,7 @@ footer a {
 .card {
     background-color: transparent;
     border-radius: 10px;
-    box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
+    box-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 6px var(--secondary-color);
     padding: 20px;
     margin: 50px;
     text-align: left;
@@ -138,7 +138,7 @@ footer a {
 .card-academic {
     background-color: transparent;
     border-radius: 10px;
-    box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
+    box-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 6px var(--secondary-color);
     padding: 20px;
     margin: 20px 20px;
     text-align: left;
@@ -164,7 +164,7 @@ footer a {
 .card-grid {
     background-color: transparent;
     border-radius: 10px;
-    box-shadow: 0 0 8px var(--secondary-color), 0 0 20px var(--secondary-color), 0 0 40px var(--secondary-color);
+    box-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 6px var(--secondary-color);
     margin: 20px;
     text-align: center;
     font-size: xx-large;
@@ -208,7 +208,7 @@ footer a {
 .card-project {
     background-color: transparent;
     border-radius: 10px;
-    box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
+    box-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 6px var(--secondary-color);
     margin: 20px;
     text-align: center;
     font-size: large;
@@ -257,7 +257,7 @@ footer a {
 }
 
 .navbar .navbar-button:hover {
-    box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
+    box-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 6px var(--secondary-color);
 }
 
 .navbar i {
@@ -336,13 +336,12 @@ footer a {
     }
 
     .navbar-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 40px;
         height: 40px;
         padding: 10px;
-        background-image: url('https://i.pinimg.com/originals/26/9d/d1/269dd16fa1f5ff51accd09e7e1602267.png');
-        background-size: 30px 30px;
-        background-repeat: no-repeat;
-        background-position: center;
         background-color: transparent;
         border: none;
         border-radius: 10px;
@@ -356,12 +355,11 @@ footer a {
         background-color: #292929;
     }
 
-    .navbar-toggle {
-        visibility: visible;
-    }
-
-    .navbar .navbar-logo {
-        display: none;
+    .fi-br-menu-burger {
+        margin-top: 35%;
+        font-size: x-large;
+        color: var(--navbar-text-color);
+        text-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 8px var(--secondary-color);
     }
 
     .navbar .navbar-button {
@@ -370,6 +368,6 @@ footer a {
     }
 
     .navbar .navbar-button:hover {
-        box-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
+        box-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 6px var(--secondary-color);
     }
 }
