@@ -3,8 +3,17 @@ document.addEventListener('DOMContentLoaded', function () {
     if (theme) {
         document.body.setAttribute('data-theme', theme);
     }
+    showNavbar();
     localization();
 });
+
+function showNavbar() {
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+}
 
 function localization() {
     if (navigator.geolocation) {
