@@ -60,13 +60,31 @@ footer {
     box-sizing: border-box;
     text-align: center;
     font-size: medium;
-    z-index: 1000;
+}
+
+i {
+    font-size: xx-large;
+    color: var(--navbar-text-color);
+    text-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 8px var(--secondary-color);
 }
 
 footer i {
     font-size: xx-large;
     color: var(--navbar-text-color);
     text-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 8px var(--secondary-color);
+}
+
+.icon-input-copy {
+    font-size: x-large;
+    color: var(--navbar-text-color);
+    text-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 8px var(--secondary-color);
+}
+
+.copy i {
+    font-size: large;
+    color: var(--navbar-text-color);
+    text-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 8px var(--secondary-color);
+
 }
 
 footer a {
@@ -118,6 +136,40 @@ footer a {
     font-size: large;
     margin-top: 50px;
     margin-bottom: 70px;
+}
+
+.card-copy {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 6px var(--secondary-color);
+    padding: 20px;
+    margin: 50px;
+    text-align: left;
+    font-size: large;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-read-only {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    font-size: large;
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 2px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 6px var(--secondary-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.input-read-only:hover {
+    background-color: #292929;
 }
 
 .card h1 {
@@ -241,7 +293,6 @@ footer a {
     left: 0;
     transition: top 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.79);
-    z-index: 1000;
 }
 
 .navbar .navbar-button {
@@ -348,7 +399,7 @@ footer a {
         position: fixed;
         top: 10px;
         left: 10px;
-        z-index: 1001;
+        z-index: 1;
     }
 
     .navbar-toggle:hover {
